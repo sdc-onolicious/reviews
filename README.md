@@ -102,7 +102,7 @@ If successful, this method returns a response body with the following structure:
 
 ### Restaurant Reviews
 
-#### HTTP Request
+#### API Routes
 
 GET http://127.0.0.1:3010/:id/reviews
 
