@@ -133,3 +133,14 @@ If successful, this method returns an array containing objects with the followin
   "city": **_string_**,  
   "totalreviews": **_integer_**  
 }
+
+## Extended API
+
+| Method | Endpoint                 | Description   
+| ------ | ------------------------ | ----------------------------------------------------------------------------- |
+| POST   | /restaurants/reviews     | Adds one review                                                               |
+| GET    | /restaurants/:id/summary | Returns one object inside an array with all the aggregated ratings            |  
+| GET    | /restaurants/:id/reviews | Returns an array of objects with all the relevant reviews                     |
+| GET    | /:id                     | Returns the client page                                                       |
+| PUT    | /reviews/                | Updates a review with an request object, if review doesn't exist, creates one |
+| DELETE | /reviews/:id             | Removes a review at the given ID                                              |
