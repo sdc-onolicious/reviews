@@ -144,4 +144,3 @@ If successful, this method returns an array containing objects with the followin
 | GET    | /:id                     | Returns the client page                                                       |
 | PUT    | /reviews/                | Updates a review with an request object, if review doesn't exist, creates one |
 | DELETE | /reviews/:id             | Removes a review at the given ID                                              |
-
