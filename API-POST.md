@@ -69,7 +69,7 @@
   
   `$.ajax({
     url: "localhost:3010/reviews/1,
-    type: "PUT",
+    type: "POST",
     dataType: "json",
     data: jsonData,
     contentType: "application/json"
