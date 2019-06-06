@@ -102,7 +102,7 @@ If successful, this method returns a response body with the following structure:
 
 ### Restaurant Reviews
 
-#### HTTP Request
+#### API Routes
 
 GET http://127.0.0.1:3010/:id/reviews
 
@@ -144,4 +144,3 @@ If successful, this method returns an array containing objects with the followin
 | GET    | /:id                     | Returns the client page                                                       |
 | PUT    | /reviews/:id             | Updates a review with an request object, if review doesn't exist, creates one |
 | DELETE | /reviews/:id             | Removes a review at the given ID                                              |
-
