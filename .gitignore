@@ -38,3 +38,6 @@ database/restaurants.csv
 database/reviews.txt
 database/reviews.csv
 database/diners.csv
+database/postGres_data/diners.csv
+database/postGres_data/restaurants.csv
+database/postGres_data/reviews.csv
