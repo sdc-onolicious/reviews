@@ -1,7 +1,7 @@
 CREATE TABLE restaurants (
   id                serial primary key unique,
-  name              varchar(30),
-  location          varchar(30), 
+  name              varchar(256),
+  location          varchar(256), 
   noise             varchar(10),
   recommendpercent  int,
   averageoverall    numeric,
@@ -13,9 +13,9 @@ CREATE TABLE restaurants (
 
 CREATE TABLE diners (
   id            serial primary key unique,
-  firstname     varchar(30),
-  lastname      varchar(30),
-  city          varchar(30),
+  firstname     varchar(256),
+  lastname      varchar(256),
+  city          varchar(256),
   avatarcolor   varchar(10),
   isvip         boolean,
   totalreviews  int
@@ -32,7 +32,7 @@ CREATE TABLE reviews (
   service         int,
   ambience        int,
   wouldrecommend  boolean,
-  tags            varchar(100),
+  tags            varchar(256),
   foreign key (diner) references diners(id),
   foreign key (restaurant) references restaurants(id)
 );

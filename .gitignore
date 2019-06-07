@@ -32,3 +32,9 @@ public/bundle.js
 # Local Postgres Role Name
 config/db_config.js
 
+database/untitled folder/reviews.csv
+database/reviewstest.csv
+database/restaurants.csv
+database/reviews.txt
+database/reviews.csv
+database/diners.csv
