@@ -12,31 +12,13 @@ write();
 
 //  id | firstname | lastname | city | avatarcolor | isvip | totalreviews 
 
-function Date() {
-  return {
-    id: i++,
-    firstname: casual.first_name,
-    lastname: casual.last_name,
-    city: casual.city,
-    avatarcolor: casual.rgb_hex,
-    isvip: casual.coin_flip,
-    totalreviews: casual.integer(from=1, to=100)
-  }
-}
-
 function write() {
   
-  while (i < 2) { 
-    if (!stream.write({
-        id: i++,
-        firstname: casual.first_name,
-        lastname: casual.last_name,
-        city: casual.city,
-        avatarcolor: casual.rgb_hex,
-        isvip: casual.coin_flip,
-        totalreviews: casual.integer(from=1, to=100)
-      })) {
-        return;
+  while (i < 1000001) { 
+    if (!stream.write(
+     `${i++},${casual.first_name},${casual.last_name},${casual.city},${casual.rgb_hex},${casual.coin_flip},${casual.integer(from=1, to=100)}\n`
+    )){
+      return;
     }
   }
   var end = new Date() - start,
