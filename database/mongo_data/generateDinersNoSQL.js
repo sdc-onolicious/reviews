@@ -1,5 +1,5 @@
 var fs = require('fs');
-var stream = fs.createWriteStream(__dirname + '/diners.csv');
+var stream = fs.createWriteStream(__dirname + '/diners.json');
 var i = 1;
 var casual = require('casual');
 var start = new Date()
@@ -12,30 +12,18 @@ write();
 
 //  id | firstname | lastname | city | avatarcolor | isvip | totalreviews 
 
-function Date() {
-  return {
-    id: i++,
-    firstname: casual.first_name,
-    lastname: casual.last_name,
-    city: casual.city,
-    avatarcolor: casual.rgb_hex,
-    isvip: casual.coin_flip,
-    totalreviews: casual.integer(from=1, to=100)
-  }
-}
-
 function write() {
   
-  while (i < 2) { 
-    if (!stream.write({
-        id: i++,
+  while (i <= 1000000) { 
+    if (!stream.write(JSON.stringify({
+        _id: i++,
         firstname: casual.first_name,
         lastname: casual.last_name,
         city: casual.city,
         avatarcolor: casual.rgb_hex,
         isvip: casual.coin_flip,
         totalreviews: casual.integer(from=1, to=100)
-      })) {
+      }))) {
         return;
     }
   }

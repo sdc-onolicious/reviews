@@ -41,3 +41,11 @@ database/diners.csv
 database/postGres_data/diners.csv
 database/postGres_data/restaurants.csv
 database/postGres_data/reviews.csv
+database/postGres_data/1, 10, 100 million/restaurants.csv
+database/postGres_data/1, 10, 100 million/diners.csv
+database/postGres_data/1, 10, 100 million/reviews.csv
+database/mongo_data/restaurants.csv
+database/mongo_data/reviews.csv
+database/mongo_data/diners.csv
+database/mongo_data/diners.json
+database/mongo_data/restaurantsreviews.json
