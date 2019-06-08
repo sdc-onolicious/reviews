@@ -37,7 +37,7 @@ write();
 //  id | restaurant | diner | text | date | overall | food | service | ambience | wouldrecommend | tags 
 function write() {
   
-  while (i < 100000001) { 
+  while (i <= 100000000) { 
     if (!stream.write(
      `${i++},${casual.integer(from = 1, to = 10000000)},${casual.integer(from = 1, to = 1000000)},${casual.text},${casual.date(format = 'YYYY-MM-DD')},${casual.integer(from = 0, to = 5)},${casual.integer(from = 0, to = 5)},${casual.integer(from = 0, to = 5)},${casual.integer(from = 1, to = 3)},${casual.coin_flip},"${generateTags()}"\n`
     )){

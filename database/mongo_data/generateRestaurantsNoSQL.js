@@ -12,21 +12,7 @@ stream.on('drain', function() {
 write();
 
 // id | name | location | noise | recommendpercent | averageoverall | averageservice | averageambience | averagefood | valuerating 
-function Review() {
-  return {
-    _id :i++,
-    restaurant: casual.integer(from = 1, to = 10000000),
-    diner: casual.integer(from = 1, to = 1000000),
-    text: casual.text,
-    date: casual.date(format = 'YYYY-MM-DD'),
-    overall: casual.integer(from = 0, to = 5),
-    food: casual.integer(from = 0, to = 5),
-    service: casual.integer(from = 0, to = 5),
-    ambience: casual.integer(from = 1, to = 3),
-    wouldrecommend: casual.coin_flip,
-    tags: generateTags()
-  }
-}
+
 function create10Reviews() {
   arr = [];
   for (let j = 1; j <= 10; j++) {
@@ -56,11 +42,11 @@ function write() {
       location: casual.city,
       noise: casual.random_element(['Quiet','Loud','Average']),
       recommendpercent: casual.integer(from = 1, to = 100),
-      averageoverall: casual.integer(from = 0, to = 4),
-      averageservice: casual.integer(from = 0, to=9),
-      averageambience: casual.integer(from = 0, to = 4),
-      averagefood: casual.integer(from = 0, to=9),
-      valuerating: casual.integer(from = 0, to = 4),
+      averageoverall: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      averageservice: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      averageambience: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      averagefood: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      valuerating: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
       reviews: create10Reviews()
     }))){
       return;
