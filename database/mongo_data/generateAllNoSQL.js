@@ -1,6 +1,6 @@
 
 var fs = require('fs');
-var stream = fs.createWriteStream(__dirname + '/restaurantsreviews.json');
+var stream = fs.createWriteStream(__dirname + '/restaurantsreviewsusers.json');
 var i = 1;
 var casual = require('casual');
 var start = new Date()
@@ -27,14 +27,21 @@ function create10Reviews() {
       service: casual.integer(from = 0, to = 5),
       ambience: casual.integer(from = 1, to = 3),
       wouldrecommend: casual.coin_flip,
-      tags: generateTags()
+      tags: generateTags(),
+      diner: {
+        firstname: casual.first_name,
+        lastname: casual.last_name,
+        city: casual.city,
+        avatarcolor: casual.rgb_hex,
+        isvip: casual.coin_flip,
+        totalreviews: casual.integer(from=1, to=100)
+      }
     })
   }
   return arr;
 }
 
-function write() {
-  
+function write() {  
   while (i <= 10000000) { 
     if (!stream.write(JSON.stringify({
       _id: i++,

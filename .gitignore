@@ -49,3 +49,4 @@ database/mongo_data/reviews.csv
 database/mongo_data/diners.csv
 database/mongo_data/diners.json
 database/mongo_data/restaurantsreviews.json
+database/mongo_data/restaurantsreviewsusers.json
