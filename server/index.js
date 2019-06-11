@@ -1,8 +1,8 @@
 const path = require('path');
 const cors = require('cors');
 const express = require('express');
-const db = require('../database/index.js');
-
+const db = require('../database/indexMongo.js');
+const controllers = require('./controllers/reviewControllers')
 const app = express();
 
 app.use(cors());
@@ -28,6 +28,9 @@ app.get('/:id/summary', (req, res) => {
     }
   });
 });
+
+app.get('/restaurants/:id/summary', controllers.getReviews)
+
 
 app.get('/:id/reviews', (req, res) => {
   db.getAllReviews(req.params.id, (err, result) => {
