@@ -7,6 +7,7 @@ var start = new Date()
 var hrstart = process.hrtime()
 
 stream.on('drain', function() {
+  console.log(i);
   write();
 });
 write();
@@ -28,14 +29,12 @@ function create10Reviews() {
       ambience: casual.integer(from = 1, to = 3),
       wouldrecommend: casual.coin_flip,
       tags: generateTags(),
-      diner: {
-        firstname: casual.first_name,
-        lastname: casual.last_name,
-        city: casual.city,
-        avatarcolor: casual.rgb_hex,
-        isvip: casual.coin_flip,
-        totalreviews: casual.integer(from=1, to=100)
-      }
+      firstname: casual.first_name,
+      lastname: casual.last_name,
+      city: casual.city,
+      avatarcolor: casual.rgb_hex,
+      isvip: casual.coin_flip,
+      totalreviews: casual.integer(from=1, to=100)
     })
   }
   return arr;
@@ -48,12 +47,12 @@ function write() {
       name: casual.title,
       location: casual.city,
       noise: casual.random_element(['Quiet','Loud','Average']),
-      recommendpercent: casual.integer(from = 1, to = 100),
-      averageoverall: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
-      averageservice: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
-      averageambience: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
-      averagefood: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
-      valuerating: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      recommendPercent: casual.integer(from = 1, to = 100),
+      averageOverall: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      averageService: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      averageAmbience: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      averageFood: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
+      valueRating: `${casual.integer(from = 0, to = 4)}.${casual.integer(from = 0, to=9)}`,
       reviews: create10Reviews()
     }))){
       return;

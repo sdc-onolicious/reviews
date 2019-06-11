@@ -1,7 +1,8 @@
 const path = require('path');
 const cors = require('cors');
 const express = require('express');
-const db = require('../database/indexMongo.js');
+const db = require('../database/index.js');
+const dbMongo = require('../database/indexMongo.js');
 const controllers = require('./controllers/reviewControllers')
 const app = express();
 
@@ -17,31 +18,32 @@ app.get('/:id', (req, res) => {
   }
 });
 
-app.get('/:id/summary', (req, res) => {
-  db.getSummary(req.params.id, (err, result) => {
-    if (err) {
-      res.status(500);
-      res.end();
-    } else {
-      res.status(200);
-      res.send(result);
-    }
-  });
-});
+// app.get('/:id/summary', (req, res) => {
+//   db.getSummary(req.params.id, (err, result) => {
+//     if (err) {
+//       res.status(500);
+//       res.end();
+//     } else {
+//       res.status(200);
+//       res.send(result);
+//     }
+//   });
+// });
 
-app.get('/restaurants/:id/summary', controllers.getReviews)
+app.get('/:id/summary', controllers.getSummary)
 
-
-app.get('/:id/reviews', (req, res) => {
-  db.getAllReviews(req.params.id, (err, result) => {
-    if (err) {
-      res.status(500);
-      res.end();
-    } else {
-      res.status(200);
-      res.send(result);
-    }
-  });
-});
+// app.get('/:id/reviews', (req, res) => {
+  //   db.getAllReviews(req.params.id, (err, result) => {
+    //     if (err) {
+      //       res.status(500);
+      //       res.end();
+      //     } else {
+        //       res.status(200);
+        //       res.send(result);
+        //     }
+        //   });
+        // });
+        
+app.get('/:id/reviews', controllers.getReviews)
 
 module.exports = app;
