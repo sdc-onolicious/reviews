@@ -70,6 +70,7 @@
     "fs": "0.0.1-security",
     "jest": "^24.8.0",
     "jsdom": "^15.1.0",
+    "newrelic": "^5.9.1",
     "nodemon": "^1.19.0",
     "react-test-renderer": "^16.8.6",
     "style-loader": "^0.23.1",

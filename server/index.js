@@ -1,9 +1,10 @@
-const path = require('path');
-const cors = require('cors');
+require('newrelic');
 const express = require('express');
-const db = require('../database/index.js');
 const dbMongo = require('../database/indexMongo.js');
 const controllers = require('./controllers/reviewControllers')
+const path = require('path');
+const cors = require('cors');
+// const db = require('../database/index.js');
 const app = express();
 
 app.use(cors());
