@@ -66,7 +66,7 @@ export default class Reviews extends React.Component {
   getSummaryData() {
     const { restaurantId } = this.props;
     request
-      .get(`http://127.0.0.1:3010/${restaurantId}/summary`)
+      .get(`/${restaurantId}/summary`)
       .then((res) => {
         this.setState({
           summary: res.body[0]
@@ -78,7 +78,7 @@ export default class Reviews extends React.Component {
   getReviewsData() {
     const { restaurantId } = this.props;
     request
-      .get(`http://127.0.0.1:3010/${restaurantId}/reviews`)
+      .get(`/${restaurantId}/reviews`)
       .then((res) => {
         this.setState({
           reviews: res.body,

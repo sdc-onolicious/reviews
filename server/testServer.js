@@ -6,7 +6,7 @@ const path = require('path');
 const cors = require('cors');
 var db;
 // Initialize connection once
-app.listen(3010)
+app.listen(4000, () => console.log('listening on 4000!'));
 app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(cors());
 
