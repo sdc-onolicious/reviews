@@ -37,6 +37,8 @@
     "lodash": "^4.17.11",
     "mini-css-extract-plugin": "^0.7.0",
     "moment": "^2.24.0",
+    "mongodb": "^2.2.33",
+    "mongoose": "^5.5.14",
     "pg": "^7.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -55,6 +57,7 @@
     "acorn": "^6.1.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
+    "casual": "^1.6.2",
     "chai": "^4.2.0",
     "css-loader": "^2.1.1",
     "csv-parser": "^2.3.0",
@@ -68,8 +71,11 @@
     "fs": "0.0.1-security",
     "jest": "^24.8.0",
     "jsdom": "^15.1.0",
+    "morgan": "^1.9.1",
+    "newrelic": "^5.9.1",
     "nodemon": "^1.19.0",
     "react-test-renderer": "^16.8.6",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "timer": "0.0.2"
   }
 }
