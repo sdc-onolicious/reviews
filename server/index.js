@@ -1,13 +1,16 @@
 require('newrelic');
 const express = require('express');
-const dbMongo = require('../database/indexMongo.js');
+const dbMongoose = require('../database/indexMongoose.js');
+// const dbMongo = require('../database/indexMongo.js')
 const controllers = require('./controllers/reviewControllers')
 const path = require('path');
 const cors = require('cors');
+const morgan = require('morgan')
 // const db = require('../database/index.js');
 const app = express();
 
 app.use(cors());
+// app.use(morgan('dev'));
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.get('/:id', (req, res) => {

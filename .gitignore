@@ -51,3 +51,5 @@ database/mongo_data/diners.json
 database/mongo_data/restaurantsreviews.json
 database/mongo_data/restaurantsreviewsusers.json
 newrelic.js
+database/mongodump/dump/test/reviews.bson.gz
+database/mongodump/dump/test/reviews.metadata.json.gz
