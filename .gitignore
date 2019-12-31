@@ -53,3 +53,4 @@ database/mongo_data/restaurantsreviewsusers.json
 newrelic.js
 database/mongodump/dump/test/reviews.bson.gz
 database/mongodump/dump/test/reviews.metadata.json.gz
+a_million_commits.sh
